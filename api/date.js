@@ -15,7 +15,7 @@ module.exports = (req, res) => {
 	var dates = timezones.map((tz) => {
 		return { 
 			timezone: tz,
-			date: changeTimezone(date, tz).toString() 
+			date: changeTimezone(date, tz).toLocaleString('id') 
 		}	
 	});
 
@@ -28,7 +28,7 @@ module.exports = (req, res) => {
 function changeTimezone(date, ianatz) {
 
   // suppose the date is 12:00 UTC
-  var invdate = new Date(date.toLocaleString('en-US', {
+  var invdate = new Date(date.toLocaleString('id-ID', {
     timeZone: ianatz
   }));
 

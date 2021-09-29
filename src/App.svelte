@@ -17,6 +17,9 @@
 	h2 {
 		margin-top: 5px;
 	}
+	p.datetime {
+		margin: 0;
+	}
 </style>
 
 <main>
@@ -27,7 +30,7 @@
   <br />
   <hr>
   {#each dates as _date}
-	  <p>{ _date.timezone }: { _date.date }</p>
+	<p class="datetime"><strong>{ _date.timezone }</strong>  { _date.date }</p>
   {:else} 
 	<p>Loading...</p>
   {/each}
