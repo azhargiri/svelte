@@ -5,10 +5,11 @@ module.exports = (req, res) => {
 		'Asia/Jakarta',
 		'Asia/Makassar',
 		'Asia/Jayapura',
-		'Asia/Kualalumpur',
+		'Asia/Kuala_Lumpur',
 		'Asia/Singapore',
 		'Asia/Tokyo',
-		'Asia/Jeddah',
+		'Asia/Riyadh',
+		'Asia/Jerusalem',
   ];
 
 	var dates = timezones.map((tz) => {
@@ -17,6 +18,8 @@ module.exports = (req, res) => {
 			date: changeTimezone(date, tz).toString() 
 		}	
 	});
+
+	console.log(dates);
 
   res.status(200).send(JSON.stringify(dates));
 };
