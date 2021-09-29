@@ -19,8 +19,6 @@ module.exports = (req, res) => {
 		}	
 	});
 
-	console.log(dates);
-
   res.status(200).send(JSON.stringify(dates));
 };
 
