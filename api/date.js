@@ -15,7 +15,7 @@ module.exports = (req, res) => {
 	var dates = timezones.map((tz) => {
 		return { 
 			timezone: tz,
-			date: changeTimezone(date, tz).toLocaleString() 
+			date: changeTimezone(date, tz).toString() 
 		}	
 	});
 
